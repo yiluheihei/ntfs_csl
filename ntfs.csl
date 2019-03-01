@@ -10,12 +10,12 @@
     </author>
     <category citation-format="numeric"/>
     <summary>ntfs2019 style</summary>
-    <updated>2019-03-1</updated>
+    <updated>2019-03-01T02:45:06+00:00</updated>
     <rights license="http://creativecommons.org/licenses/by-sa/3.0/">This work is licensed under a Creative Commons Attribution-ShareAlike 3.0 License</rights>
   </info>
   <macro name="author">
     <names variable="author">
-      <name sort-separator=" " delimiter=", "  form="long" delimiter-precedes-last="always" name-as-sort-order="all" initialize-with=""/>
+      <name sort-separator=" " delimiter=", " form="long" delimiter-precedes-last="always" name-as-sort-order="all" initialize-with=""/>
     </names>
   </macro>
   <citation collapse="citation-number">
@@ -26,19 +26,22 @@
       <text variable="citation-number"/>
     </layout>
   </citation>
-  <bibliography  entry-spacing="0">
+  <bibliography entry-spacing="0">
     <layout>
-      <text variable="citation-number" suffix=". "/>
-      <text macro="author"/>
-      <text variable="title" prefix=", " suffix=", "/>
-      <text variable="container-title" form="short" suffix=", "/>
-      <date variable="issued" suffix=", ">
-        <date-part name="year"/>
-      </date>
-      <text variable="volume"/>
-      <text variable="issue" prefix="(" suffix=")"/>
-      <text value=": "/>
-      <text variable="page"/>
+      <text variable="citation-number" suffix="."/>
+      <group delimiter=", " prefix=" ">
+        <text macro="author" prefix=""/>
+        <text variable="title"/>
+        <text variable="container-title" form="short"/>
+        <date variable="issued">
+          <date-part name="year"/>
+        </date>
+        <group>
+          <text variable="volume"/>
+          <text variable="issue" prefix="(" suffix=")"/>
+          <text variable="page" prefix=":"/>
+        </group>
+      </group>
     </layout>
   </bibliography>
 </style>
