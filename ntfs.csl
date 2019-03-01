@@ -36,7 +36,8 @@
         <date-part name="year"/>
       </date>
       <text variable="volume"/>
-      <text variable="issue" prefix="(" suffix="): "/>
+      <text variable="issue" prefix="(" suffix=")"/>
+      <text value=": "/>
       <text variable="page"/>
     </layout>
   </bibliography>
